@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body class="body1">
+
+
+<span id="user_baza" style="display: none;"></span>
+<span id="mail_baza" style="display: none;"></span>
+<span id="pass_baza" style="display: none;"></span>
+
+<button class="button" id="in1">Sign in</button>
+<button class="button" id="up">Sign up</button>
+
+<div class="sign-up" id="signup">
+<input type="text" name="text" id="user" placeholder="Istifadeci adini yaz: ">
+<input type="email" name="email" id="mail" placeholder="Mail daxil et: ">
+<input type="password " id="pass1" name="password" placeholder="Parolu daxil et: ">
+
+ 
+
+<input type="password " name="password " id="pass2"  placeholder="Parolu yeniden daxil et">
+
+<input type="submit" name="submit" value="Qeyd ol " id="qeyd">
+</div>
+
+<div class="sign-in" id="signin">
+<input type="text" name="text" id="user_in" placeholder="Istifadeci adini yaz: ">
+<input type="password " id="pass_in" name="password" placeholder="Parolu daxil et: ">
+<input type="submit" name="submit" value="Daxil ol "id="daxil">
+</div>
+
+<script type="text/javascript">
+
+	up.onclick=function() {
+		signup.style.display="block";
+	}
+	qeyd.onclick=function() {
+		
+		if (user.value=="") {
+			user.style.border="1px solid red"; 
+		}
+		else if (mail.value=="") {
+
+			mail.style.border="1px solid red";
+		}
+
+		else if (pass1.value=="") {
+
+			pass1.style.border="1px solid red";}
+		else if (pass2.value=="") {
+			pass2.style.border="1px solid red";
+		}
+		else if(pass2.value!=pass1.value){
+		alert("Parolu yanlis girdiz");}
+
+		else if(pass2.value==pass1.value){
+		alert("Ugurla kecdiniz");
+	  	signup.style.display="none"
+	  	user_baza.textContent=user.value;
+		mail_baza.textContent=mail.value;
+		pass_baza.textContent=pass2.value;
+	  }
+		
+	}
+
+		in1.onclick=function() {
+		signin.style.display="block";
+	}
+
+		daxil.onclick=function(){
+			if (user_in.value==user_baza.textContent &&  pass_in.value==pass_baza.textContent)  {alert("Daxil ola bilersiz");
+			signin.style.display="none"}
+
+			else{
+				alert("User ve ya Parol sefdir")
+			}
+		}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+.button{
+	padding: 20px 15px;
+	border: none;
+	background: #e9fc17;
+	color: red;
+}
+
+.body1{
+	background: black;
+}
+.sign-up{
+
+	width: 400px;
+	margin: 70px auto;
+	display: none;
+
+}
+
+.sign-up input{
+	background: #e9fc17;
+	color: red;
+	border-radius: 30px;
+	width: 100%;
+	padding: 15px;
+	margin: 2px 0;
+}
+
+.sign-in{
+	width: 400px;
+	margin: 70px auto;
+	display: none;
+
+}
+
+.sign-in input{
+	background: #e9fc17;
+	color: red;
+	border-radius: 30px;
+	width: 100%;
+	padding: 15px;
+	margin: 2px 0;
+}
